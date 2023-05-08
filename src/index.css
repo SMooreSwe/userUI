@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user__wrapper {
+  border-radius: 19% 81% 50% 50% / 44% 57% 43% 56%;
+  height: min-content;
+  width: fit-content;
+  padding: 6rem;
+  background: linear-gradient(.25turn, #00ff87, 10%, #60efff);
+}
+
+.wrapper__image {
+  border-radius: 74% 26% 73% 27% / 22% 58% 42% 78%;
+}
+
+.wrapper__text {
+  margin: 1rem 0rem;
+  font-weight: bold;
+}

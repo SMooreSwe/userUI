@@ -21,8 +21,8 @@ function App() {
         setName(`${user.name.first} ${user.name.last}`)
         setAge(`${user.dob.age}`)
         setAddress(`${user.location.street.number} ${user.location.street.name}
-        ${user.location.city}
-        ${user.location.postcode}
+        ${user.location.city} 
+        ${user.location.postcode} 
         ${user.location.country}`)
         setImageURL(`${user.picture.large}`)
       })
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <header><h1>Meet...</h1></header>
+      <h1>Meet...</h1>
       <main>
         <UserDisplay name={name} address={address} age={age} imageURL={imageURL}/>
         <NameChanger nameSetter={nameSetter}/> 

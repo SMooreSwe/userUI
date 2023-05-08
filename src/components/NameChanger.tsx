@@ -12,16 +12,20 @@ const NameChanger = ({ nameSetter }: ChangerProps) => {
         if (newName) {
             nameSetter(newName)
         } else {
-
+            setIsEmpty(true)
+            setTimeout(() => setIsEmpty(false), 2000)
         }
 
     }
     
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <>
+        <form className='NameChanger__inputForm' onSubmit={(e) => handleSubmit(e)}>
             <input ref={selector} type="text" placeholder='Type a new name here!'/>
-            <input type="submit" value="Change User's Name" />
+            <input type="submit" value="Change user's name" />
         </form>
+        <div className={isEmpty ? 'error' : 'hidden' }>Please input a name for this user!</div>
+        </>
     )
 }
 

@@ -37,4 +37,9 @@ type Name = {
     age: string,
     imageURL: string
   }
-export type { User, UserProps }
+
+  type ChangerProps = {
+    nameSetter: Function
+  }
+
+export type { User, UserProps, ChangerProps }

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { User } from './utils/types';
 import UserDisplay from './components/UserDisplay';
+import NameChanger from './components/NameChanger';
 
 
 function App() {
@@ -30,12 +31,13 @@ function App() {
   const nameSetter = (newName : string) => {
     setName(newName)
   }
-  
+
   return (
     <div className="App">
       <header><h1>Meet...</h1></header>
       <main>
         <UserDisplay name={name} address={address} age={age} imageURL={imageURL}/>
+        <NameChanger nameSetter={nameSetter}/> 
       </main>
     </div>
   );
